@@ -320,8 +320,8 @@ div.wrapper {
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 160px;
+    align-items: flex-end;
+    padding-bottom: 150px;
 }
 
 div.wrapper::before {
@@ -472,6 +472,11 @@ button#start-new-order-btn:active {
     div.product-box {
         width: 30%;
         min-width: 12rem;
+    }
+
+    div.wrapper {
+        align-items: flex-start;
+        padding-top: 150px;
     }
 
 }

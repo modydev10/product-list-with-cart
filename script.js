@@ -260,3 +260,4 @@ function changeImgDependingOnScreenSize() {
 }
 window.addEventListener('resize', changeImgDependingOnScreenSize)
 
+
