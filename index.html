@@ -11,35 +11,104 @@
 </head>
 
 <body>
-
   <main id="all-elements-container">
 
     <div id="container-for-h1-and-products-list">
-
       <h1 id="title">Desserts</h1>
-
-      <div class="products-container">
-        <div class="product-box">
-          <img src="" alt="" class="product-img">
-          <button id="add-to-cart-btn">Add to Cart</button>
-          <span class="category">Macaron</span>
-          <span class="product-name">Macaron Mix of Five</span>
-          <span class="product-price">$8.00</span>
-        </div>
-      </div>
-      
+      <div id="products-list"></div>
     </div>
 
     <div id="cart">
-      <span class="red-text">Your Cart (<span id="quantity"></span>)</span>
-      <img src="assets/images/illustration-empty-cart.svg" alt="" id="img-for-empty-cart">
-      <span id="message-for-empty-cart">Your added items will appear here</span>
+      <span id="products-amount-span">Your Cart (<span>0</span>)</span>
+
+      <div class="layout-for-empty-cart">
+        <img src="assets/images/illustration-empty-cart.svg" alt="" id="img-for-empty-cart">
+        <span id="message-for-empty-cart">Your added items will appear here</span>
+      </div>
+
+      <div class="layout-for-unempty-cart hidden">
+        <div id="selected-products-list"></div>
+
+        <div class="total-info-container">
+          <span class="text">Order Total</span>
+          <span class="total">$0.00</span>
+        </div>
+        <div class="last-msg-container">
+          <img src="assets/images/icon-carbon-neutral.svg" alt="" />
+          <span class="last-msg">This is a <strong>carbon-neutral</strong> delivery</span>
+        </div>
+        <button id="confirm-order-btn">Confirm Order</button>
+      </div>
     </div>
 
   </main>
 
+  <div class="wrapper hidden">
+    <div id="confirmed-order-card">
+      <div class="upper-content-container">
+        <img src="assets/images/icon-order-confirmed.svg" alt="" />
+        <span class="order-confirmed-text">Order Confirmed</span>
+        <span class="small-msg">We hope you enjoy your food!</span>
+      </div>
+      <div class="orders-list-and-total-price">
+        <div id="orders-list"></div>
+        <div class="order-total-price-container">
+          <span>Order Total</span>
+          <span class="total-in-confirmed-order-card"></span>
+        </div>
+      </div>
+      <button id="start-new-order-btn">Start New Order</button>
+    </div>
+  </div>
 
 
+  <template id="product-box-template">
+    <div class="product-box">
+      <img src="" alt="" class="product-img">
+      <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="" class="cart-img">Add to
+        Cart</button>
+      <div class="control-quantity-buttons-container hidden">
+        <button class="decrease-quantity-btn"><img src="assets/images/icon-decrement-quantity.svg" alt=""></button>
+        <span class="quantity-to-add-span"></span>
+        <button class="increase-quantity-btn"><img src="assets/images/icon-increment-quantity.svg" alt=""></button>
+      </div>
+      <span class="category"></span>
+      <span class="product-name"></span>
+      <span class="product-price"></span>
+    </div>
+  </template>
+
+  <template id="selected-product-template">
+    <div class="selected-product-container">
+      <div class="product-info-container">
+        <span class="product-name-in-cart">Classic Tiramisu</span>
+        <div class="product-quantity-and-price-container">
+          <span class="product-quantity">1x</span>
+          <span class="selected-product-price">@ $5.50</span>
+          <span class="selected-product-total-price">$5.50</span>
+        </div>
+      </div>
+      <button class="remove-product-btn">
+        <img src="assets/images/icon-remove-item.svg" alt="remove from cart">
+      </button>
+    </div>
+  </template>
+
+  <template id="order-mini-card-template">
+    <div class="order-mini-card">
+      <div class="mini-info-box">
+        <img src="assets/images/image-tiramisu-thumbnail.jpg" alt="" class="order-img">
+        <div class="order-info-container">
+          <span class="order-name">Classic Tiramisu</span>
+          <div class="inner-box">
+            <span class="order-quantity"></span>
+            <span class="order-price"></span>
+          </div>
+        </div>
+      </div>
+      <span class="order-total-price"></span>
+    </div>
+  </template>
 
 
   <!-- <div class="attribution">
