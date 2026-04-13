@@ -15,7 +15,7 @@
 
     <div id="container-for-h1-and-products-list">
       <h1 id="title">Desserts</h1>
-      <div id="products-list"></div>
+      <ul id="products-list"></ul>
     </div>
 
     <div id="cart">
@@ -27,7 +27,7 @@
       </div>
 
       <div class="layout-for-unempty-cart hidden">
-        <div id="selected-products-list"></div>
+        <ul id="selected-products-list"></ul>
 
         <div class="total-info-container">
           <span class="text">Order Total</span>
@@ -63,7 +63,7 @@
 
 
   <template id="product-box-template">
-    <div class="product-box">
+    <li class="product-box">
       <img src="" alt="" class="product-img">
       <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="" class="cart-img">Add to
         Cart</button>
@@ -75,11 +75,11 @@
       <span class="category"></span>
       <span class="product-name"></span>
       <span class="product-price"></span>
-    </div>
+    </li>
   </template>
 
   <template id="selected-product-template">
-    <div class="selected-product-container">
+    <li class="selected-product-container">
       <div class="product-info-container">
         <span class="product-name-in-cart">Classic Tiramisu</span>
         <div class="product-quantity-and-price-container">
@@ -91,7 +91,7 @@
       <button class="remove-product-btn">
         <img src="assets/images/icon-remove-item.svg" alt="remove from cart">
       </button>
-    </div>
+    </li>
   </template>
 
   <template id="order-mini-card-template">
@@ -111,10 +111,10 @@
   </template>
 
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="" target="_blank">modydev10</a>.
-  </div> -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/modydev10" rel="noopener" target="_blank">modydev10</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
